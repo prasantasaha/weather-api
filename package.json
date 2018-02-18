@@ -4,7 +4,11 @@
   "description": "weather information for any location",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-function-forecast-local": "functions deploy forecast --trigger-http",
+    "deploy-cunction-forecast-stage": "gcloud beta functions deploy forecast --stage-bucket react-gcloud-template-deploy --trigger-http",
+    "deploy-function-places-local": "functions deploy placesAutoComplete --trigger-http",
+    "deploy-cunction-places-stage": "gcloud beta functions deploy placesAutoComplete --stage-bucket react-gcloud-template-deploy --trigger-http"
   },
   "repository": {
     "type": "git",

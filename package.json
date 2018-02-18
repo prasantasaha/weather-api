@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/prasantasaha/weather-api#readme",
   "dependencies": {
+    "@google/maps": "^0.4.5",
     "cors": "^2.8.4",
     "node-fetch": "^2.0.0"
   }

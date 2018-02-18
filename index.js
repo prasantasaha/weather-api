@@ -1,12 +1,12 @@
 const fetch = require("node-fetch");
 const cors = require("cors")();
 
+
 const DARK_SKY_END_POINT = "https://api.darksky.net/forecast/";
-const DARK_SKY_API_KEY = "0123456789abcdef9876543210fedcba"; // "841b9a6d7365fde1d393b2e77687a399";
+const DARK_SKY_API_KEY = "0123456789abcdef9876543210fedcba"; // "d50b3716794d67676d87b72f13a3cb68";
 
 exports.forecast = (req, res) => {
-    const requestURL = new url.URL(
-        `${DARK_SKY_END_POINT}${DARK_SKY_API_KEY}${req.url}`);
+    const requestURL = `${DARK_SKY_END_POINT}${DARK_SKY_API_KEY}${req.url}`;
 
     cors(req, res, () => {
         fetch(requestURL)
@@ -20,12 +20,4 @@ exports.forecast = (req, res) => {
                 res.send(data);
             });
     });
-
-
-
-
-
-
-
-
 }

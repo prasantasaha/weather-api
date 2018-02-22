@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy-function-forecast-local": "functions deploy forecast --trigger-http",
-    "deploy-cunction-forecast-stage": "gcloud beta functions deploy forecast --stage-bucket react-gcloud-template-deploy --trigger-http",
-    "deploy-function-places-local": "functions deploy placesAutoComplete --trigger-http",
-    "deploy-cunction-places-stage": "gcloud beta functions deploy placesAutoComplete --stage-bucket react-gcloud-template-deploy --trigger-http"
+    "deploy-function-forecasts-local": "functions deploy forecasts --trigger-http",
+    "deploy-function-forecasts-stage": "gcloud beta functions deploy forecasts --stage-bucket weather-api-micro --trigger-http",
+    "deploy-function-maps-local": "functions deploy maps --trigger-http",
+    "deploy-function-maps-stage": "gcloud beta functions deploy maps --stage-bucket weather-api-micro --trigger-http"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "@google/maps": "^0.4.5",
     "cors": "^2.8.4",
-    "node-fetch": "^2.0.0"
+    "node-fetch": "^2.0.0",
+    "url-pattern": "^1.0.3"
   }
 }
